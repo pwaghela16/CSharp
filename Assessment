@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeDemo
+namespace ConsoleApp1
 {
-    public delegate bool AnyArgType_ReturnBoolCommandClass<TSource>(TSource item);
+    public delegate bool AnyArgType_ReturnBoolCommandClass<TSource>(TSource item, string CustomFiler);
 
     internal class Program
     {
@@ -15,15 +15,19 @@ namespace CodeDemo
             string[] names = { "Philips", "Royal", "Siemens", "Cerner" };
 
             //Select name from  names where name ends with "s";
-            AnyArgType_ReturnBoolCommandClass<string> _functionCommandObj = new AnyArgType_ReturnBoolCommandClass<string>(Program.Endswith_s_Predicate);
-            IEnumerable<string> resultList = Search<string>(names, _functionCommandObj);
+            AnyArgType_ReturnBoolCommandClass<string> _functionCommandObj = new AnyArgType_ReturnBoolCommandClass<string>(Program.EndswithPredicate);
+            Console.WriteLine("Search Endswith");
+            String ValueForEndswith = Console.ReadLine();
+            IEnumerable<string> resultList = Search<string>(names, _functionCommandObj, ValueForEndswith);
             //display
             foreach (string item in resultList)
             {
                 Console.WriteLine(item);
             }
-            _functionCommandObj = new AnyArgType_ReturnBoolCommandClass<string>(Program.Starswith_S_Predicate);
-            resultList = Search<string>(names, _functionCommandObj);
+            _functionCommandObj = new AnyArgType_ReturnBoolCommandClass<string>(Program.StarswithPredicate);
+            Console.WriteLine("Search Startswith");
+            String ValueForStartswith = Console.ReadLine();
+            resultList = Search<string>(names, _functionCommandObj, ValueForStartswith);
             //display
             foreach (string item in resultList)
             {
@@ -32,7 +36,9 @@ namespace CodeDemo
 
             int[] numbers = { 1, 2, 3, 4, 5, 8 };
             AnyArgType_ReturnBoolCommandClass<int> _intArgBoolReturnCommandObj = new AnyArgType_ReturnBoolCommandClass<int>(Program.IsEven);
-            IEnumerable<int> intResultList = Search<int>(numbers, _intArgBoolReturnCommandObj);
+            Console.WriteLine("Search Odd OR Even");
+            String ValueForOddOrEven = Console.ReadLine();
+            IEnumerable<int> intResultList = Search<int>(numbers, _intArgBoolReturnCommandObj, ValueForOddOrEven);
 
             foreach (int item in intResultList)
             {
@@ -41,28 +47,29 @@ namespace CodeDemo
             Console.ReadLine();
         }
 
-        static bool IsEven(int item)
+        static bool IsEven(int item, string CustomFiler)
         {
-            return item % 2 == 0;
+            if (CustomFiler== "Odd")
+            {
+                return item % 2 != 0;
+            }
+            else 
+            {
+                return item % 2 == 0;
+            }
+                
         }
-        static bool Endswith_s_Predicate(string item)
+        static bool EndswithPredicate(string item, string CustomFiler)
         {
-            return item.EndsWith("s");
+            return item.EndsWith(CustomFiler);
         }
-        static bool Endswith_r_Predicate(string item)
+     
+        static bool StarswithPredicate(string item, string CustomFiler)
         {
-            return item.EndsWith("r");
-        }
-        static bool Starswith_P_Predicate(string item)
-        {
-            return item.StartsWith("P");
-        }
-        static bool Starswith_S_Predicate(string item)
-        {
-            return item.StartsWith("S");
+            return item.StartsWith(CustomFiler);
         }
 
-        static IEnumerable<Tsource> Search<Tsource>(IEnumerable<Tsource> source, AnyArgType_ReturnBoolCommandClass<Tsource> predicate)
+        static IEnumerable<Tsource> Search<Tsource>(IEnumerable<Tsource> source, AnyArgType_ReturnBoolCommandClass<Tsource> predicate, string CustomFiler)
         {
             List<Tsource> resultList = new List<Tsource>();
             //Select name from  names where name ends with "s";
@@ -89,15 +96,13 @@ namespace CodeDemo
 
             foreach (Tsource item in source)
             {
-                if (predicate.Invoke(item))
+                if (predicate.Invoke(item,CustomFiler))
                 {
                     resultList.Add(item);
 
                 }
             }
-           
             return resultList;
-           
 
         }
     }
