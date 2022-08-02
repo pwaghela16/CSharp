@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ParseCSV
+{
+
+    public class PatientInfo
+    {
+
+        public string MRN { get; set; }
+        public string NAME { get; set; }
+        public int AGE { get; set; }
+        public string CONTACTNUMBER { get; set; }
+        public string EMAIL { get; set; }
+        internal static PatientInfo ParseRow(string row)
+        {
+            var columns = row.Split(',');
+            return new PatientInfo()
+            {
+                MRN = columns[0],
+                NAME = columns[1],
+                AGE = int.Parse(columns[2]),
+                CONTACTNUMBER = columns[3],
+                EMAIL = columns[4],
+
+            };
+        }
+
+    }
+    public class PatientCSVProvider
+    {
+        public static List<PatientInfo> GetAllPatients(string path)
+        {
+
+            return File.ReadAllLines(path)
+               .Skip(1)
+               .Where(row => row.Length > 0)
+               .Select(PatientInfo.ParseRow).ToList();
+    
+        }
+    }
+
+    public class Client
+    {
+        static void Main(string[] args)
+        {
+            PatientCSVProvider provider = new PatientCSVProvider();
+            string FilePath = "D:\\PatientsInfo.csv";
+            IEnumerable<PatientInfo> patients = PatientCSVProvider.GetAllPatients(FilePath);
+            IEnumerable<PatientInfo> result = patients.Where(p => p.AGE > 34);
+            foreach (PatientInfo patient in result)
+            {
+                Console.WriteLine($"{patient.MRN},{patient.NAME},{patient.AGE},{patient.CONTACTNUMBER},{patient.EMAIL}" ); // M400,JAMES,35,12356,james@tom.com
+                                                   //M500,JACOB,38,12346,jacob @tom.com
+            }
+            Console.ReadLine();
+        }
+    }
+}
