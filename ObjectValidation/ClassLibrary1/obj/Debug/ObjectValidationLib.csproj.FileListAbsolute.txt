@@ -1,0 +1,12 @@
+C:\Users\320168199\source\repos\ClassLibrary1\ClassLibrary1\bin\Debug\ObjectValidationLib.dll
+C:\Users\320168199\source\repos\ClassLibrary1\ClassLibrary1\bin\Debug\ObjectValidationLib.pdb
+C:\Users\320168199\source\repos\ClassLibrary1\ClassLibrary1\obj\Debug\ObjectValidationLib.csprojAssemblyReference.cache
+C:\Users\320168199\source\repos\ClassLibrary1\ClassLibrary1\obj\Debug\ObjectValidationLib.csproj.CoreCompileInputs.cache
+C:\Users\320168199\source\repos\ClassLibrary1\ClassLibrary1\obj\Debug\ObjectValidationLib.dll
+C:\Users\320168199\source\repos\ClassLibrary1\ClassLibrary1\obj\Debug\ObjectValidationLib.pdb
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ClassLibrary1\bin\Debug\ObjectValidationLib.dll
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ClassLibrary1\bin\Debug\ObjectValidationLib.pdb
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ClassLibrary1\obj\Debug\ObjectValidationLib.csprojAssemblyReference.cache
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ClassLibrary1\obj\Debug\ObjectValidationLib.csproj.CoreCompileInputs.cache
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ClassLibrary1\obj\Debug\ObjectValidationLib.dll
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ClassLibrary1\obj\Debug\ObjectValidationLib.pdb

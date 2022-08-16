@@ -1,0 +1,20 @@
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\bin\Debug\ValidatorApp.exe.config
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\bin\Debug\ValidatorApp.exe
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\bin\Debug\ValidatorApp.pdb
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\bin\Debug\ObjectValidationLib.dll
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\bin\Debug\ObjectValidationLib.pdb
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\obj\Debug\ValidatorApp.csprojAssemblyReference.cache
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\obj\Debug\ValidatorApp.csproj.CoreCompileInputs.cache
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\obj\Debug\ValidatorApp.csproj.CopyComplete
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\obj\Debug\ValidatorApp.exe
+C:\Users\320168199\source\repos\ClassLibrary1\ValidatorApp\obj\Debug\ValidatorApp.pdb
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\bin\Debug\ValidatorApp.exe.config
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\bin\Debug\ValidatorApp.exe
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\bin\Debug\ValidatorApp.pdb
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\bin\Debug\ObjectValidationLib.dll
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\bin\Debug\ObjectValidationLib.pdb
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\obj\Debug\ValidatorApp.csprojAssemblyReference.cache
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\obj\Debug\ValidatorApp.csproj.CoreCompileInputs.cache
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\obj\Debug\ValidatorApp.csproj.CopyComplete
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\obj\Debug\ValidatorApp.exe
+D:\temp\New folder (5)\CSharpwith.NET\ObjectValidation\ValidatorApp\obj\Debug\ValidatorApp.pdb
